@@ -8,16 +8,22 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import ram from './ram.svg';
-
+import namarama from './namarama.png';
+import github from './github.png';
 
 
 
 export default class Bootstrap extends React.Component {
   render() {
     return (
-    <Navbar bg="dark" variant="dark" >
+
+
+      // Navbar Start
+
+    <Navbar bg="dark" variant="dark" className="navini text-white" style ={{backgroundImage:'linear-gradient(to right,#27AB12, #010418, #290380,#33035a)'}}>
       <Container fluid>
-        
+
+        {/* logo */}
         <Navbar.Brand href="#" className="Logo mr-3">
 
         <img
@@ -32,6 +38,7 @@ export default class Bootstrap extends React.Component {
 
 
         </Navbar.Brand>
+        {/* logo END */}
         
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -40,20 +47,50 @@ export default class Bootstrap extends React.Component {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
+            {/* Nama Logo */}
+            <Nav.Link ><img
+              alt=""
+              src={namarama}
+              width="300"
+              
+              className="d-inline-block align-top mr-5"
+            />{' '}</Nav.Link>
+            {/* Nama Logo END */}
+
+
+            
+            
+            
+          </Nav>
+          <Nav>
+          <NavDropdown title="Contact Me" id="navbarScrollingDropdown" className='me-3 ml-5 dropdown' >
+              <NavDropdown.Item href="https://wa.me/+6281380580240" target="_blank" >
+                <img src="https://img.icons8.com/color/48/000000/whatsapp.png" /> Whatsapp
               </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
+              <NavDropdown.Item href="https://instagram.com/ramdhey_?igshid=YmMyMTA2M2Y=" target="_blank">
+                <img src="https://img.icons8.com/color/48/000000/instagram-new.png" /> Instagram
+
               </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
+              <NavDropdown.Item href="mailto:ramadheayudhistira@gmail.com" target="_blank">
+                <img src="https://img.icons8.com/color/48/000000/gmail.png" /> Gmail
+              </NavDropdown.Item>
+              <NavDropdown.Item href="https://www.linkedin.com/in/rama-dhea-yudhistira-058b46229/" target="_blank">
+                <img src="https://img.icons8.com/color/48/000000/linkedin.png" /> Linkedin
+              </NavDropdown.Item>
+              
+              
+          </NavDropdown>
+
+
+            <Nav.Link eventKey={2} href="https://github.com/ramdhey?tab=repositories" target="_blank">
+            <img
+              alt=""
+              src={github}
+              width="30"
+              
+              className="gitub d-inline-block align-top mr-5"
+            /> {' '}
+              My Github
             </Nav.Link>
           </Nav>
           <Form className="d-flex">
@@ -68,6 +105,10 @@ export default class Bootstrap extends React.Component {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    // Navbar END
+
+
+
     );
   }
 }
