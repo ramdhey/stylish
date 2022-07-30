@@ -1,0 +1,35 @@
+.btnini{
+  background-color: #340A8E;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  box-shadow : 0px 0px 10px black !important;
+}
+
+.btnini:hover {
+  background-color: hsl(259, 66%, 42%);
+  border-color: hsl(259, 66%, 42%);
+  box-shadow : 0px 0px 10px black !important;
+}
+
+.jumbotron{
+  background-image: url('image/dek.jpg');
+  background-size: cover;
+  height: 575px;
+}
+
+
+
+.cardnya{
+  
+  background-color: #340A8E;
+  border-radius: 20px;
+  
+}
+
+.cardnya:hover{
+  background-color: #0d5dc5;
+
+}
+
